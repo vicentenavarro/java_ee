@@ -1,0 +1,20 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	background-color:lightorage
+}
+header{
+	heigth:20%;
+	with:100%;
+	font-weight:bold;
+	font-size:50px;
+	color:green;
+}
+
+table{
+	border:2px;
+}
+
+.tablaCab{
+	brackground-color:lightyellow;
+}

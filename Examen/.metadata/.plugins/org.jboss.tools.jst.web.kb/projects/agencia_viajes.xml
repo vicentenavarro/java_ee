@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths/>
+ <validation>
+  <core validator-id="jsf-verification"/>
+  <core validator-id="jboss.cdi.core"/>
+  <el>
+   <linked-el length="11" name="%0" offset="602" path="%1"/>
+   <linked-el length="11" name="%0" offset="624" path="%2"/>
+   <linked-el length="22" name="%3" offset="451" path="%4"/>
+   <linked-el length="17" name="%5" offset="560" path="%4"/>
+   <linked-el length="22" name="%6" offset="451" path="%4"/>
+   <linked-el length="28" name="%7" offset="506" path="%8"/>
+   <linked-el length="16" name="%9" offset="759" path="%2"/>
+   <linked-el length="16" name="%9" offset="746" path="%1"/>
+   <linked-el length="18" name="%10" offset="726" path="%2"/>
+   <linked-el length="12" name="%11" offset="667" path="%2"/>
+   <linked-el length="12" name="%11" offset="655" path="%1"/>
+   <linked-el length="28" name="%12" offset="506" path="%8"/>
+   <linked-el length="43" name="%13" offset="790" path="%1"/>
+   <linked-el length="12" name="%13" offset="667" path="%2"/>
+   <linked-el length="12" name="%13" offset="655" path="%1"/>
+   <linked-el length="16" name="%13" offset="759" path="%2"/>
+   <linked-el length="17" name="%13" offset="694" path="%2"/>
+   <linked-el length="18" name="%13" offset="726" path="%2"/>
+   <linked-el length="17" name="%13" offset="566" path="%8"/>
+   <linked-el length="43" name="%13" offset="803" path="%2"/>
+   <linked-el length="17" name="%13" offset="682" path="%1"/>
+   <linked-el length="17" name="%13" offset="714" path="%1"/>
+   <linked-el length="16" name="%13" offset="746" path="%1"/>
+   <linked-el length="43" name="%14" offset="790" path="%1"/>
+   <linked-el length="17" name="%14" offset="694" path="%2"/>
+   <linked-el length="17" name="%14" offset="566" path="%8"/>
+   <linked-el length="43" name="%14" offset="803" path="%2"/>
+   <linked-el length="17" name="%14" offset="682" path="%1"/>
+   <linked-el length="17" name="%14" offset="714" path="%1"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias path="lista" value="%0"/>
+  <alias path="/agencia_viajes/WebContent/listadoviajes.jsp" value="%2"/>
+  <alias path="/agencia_viajes/WebContent/anadirFavoritos.jsp" value="%8"/>
+  <alias path="viajes.precio" value="%9"/>
+  <alias path="viajes.duracion" value="%10"/>
+  <alias path="/agencia_viajes/WebContent/index.jsp" value="%4"/>
+  <alias path="/agencia_viajes/WebContent/buscarViajes.jsp" value="%1"/>
+  <alias path="initParam.Promocion" value="%3"/>
+  <alias path="numeroUsuarios" value="%5"/>
+  <alias path="initParam" value="%6"/>
+  <alias path="sessionScope.favoritos" value="%7"/>
+  <alias path="viajes.id" value="%11"/>
+  <alias path="sessionScope" value="%12"/>
+  <alias path="viajes" value="%13"/>
+  <alias path="viajes.destino" value="%14"/>
+ </aliases>
+ <includes/>
+ <uris/>
+</kb-project>

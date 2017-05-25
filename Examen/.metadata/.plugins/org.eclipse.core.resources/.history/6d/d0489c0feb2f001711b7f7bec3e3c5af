@@ -1,0 +1,83 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+import db.DB;
+import modelos.Viajes;
+
+public class DAOViajes {
+
+	public ArrayList<Viajes> listar(){
+		ArrayList<Viajes> lista=new ArrayList<Viajes>();
+		
+		String sql="select * from viajes";
+		try(Connection con=DB.getConexion();
+		    Statement stm=con.createStatement();
+			ResultSet rs=stm.executeQuery(sql);){
+			
+			
+			while(rs.next()){
+				Viajes a=new Viajes(rs.getInt("id"),rs.getString("destino"),rs.getInt("duracion"),rs.getDouble("precio"));
+				lista.add(a);
+			}
+			
+			
+			
+		}
+		catch(SQLException sqle){
+			sqle.printStackTrace();
+		}
+		System.out.println(lista);
+		return lista;
+	}
+	public ArrayList<Viajes> buscar(String destino){
+		ArrayList<Viajes> lista=new ArrayList<Viajes>();
+		
+		String sql="select * from viajes where destino like ?";
+		try(Connection con=DB.getConexion();
+		    PreparedStatement stm=con.prepareStatement(sql)){
+			
+			stm.setString(1,"%"+destino+"%");
+			
+			ResultSet rs=stm.executeQuery();
+			while(rs.next()){
+				Viajes a=new Viajes(rs.getInt("id"),rs.getString("destino"),rs.getInt("duracion"),rs.getDouble("precio"));
+				lista.add(a);
+			}
+			rs.close();
+			
+		}
+		catch(SQLException sqle){
+			sqle.printStackTrace();
+		}
+		
+		return lista;
+	} 
+	public Viajes favoritoViajes(int id){
+		Viajes a=null;
+		
+		String sql="select * from viajes where id=?";
+		
+		try(Connection con=DB.getConexion();
+			PreparedStatement stm=con.prepareStatement(sql)){
+			
+			stm.setInt(1,id);
+			ResultSet rs=stm.executeQuery();
+			if(rs.next()){
+				a=new Viajes(id,rs.getString("destino"),rs.getInt("duracion"),rs.getDouble("precio"));
+			}
+			rs.close();
+			
+		}
+		catch(SQLException sqle){
+			sqle.printStackTrace();
+		}
+		
+		return a;
+	}
+}

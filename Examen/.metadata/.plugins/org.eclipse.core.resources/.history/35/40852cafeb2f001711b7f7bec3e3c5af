@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Listado Viajes</title>
+</head>
+<body>
+<div>Listado general de anuncios</div>
+	<table>
+		<c:forEach items="${lista}" var="viajes">
+			<tr>
+				<td><a href="AnadirFavorito?id=${viajes.id}">${viajes.destino}</a></td>
+			</tr>
+		</c:forEach>
+	</table>
+	<a href="Inicio">Volver</a>
+
+</body>
+</html>

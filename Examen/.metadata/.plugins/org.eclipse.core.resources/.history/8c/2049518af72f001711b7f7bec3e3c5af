@@ -1,0 +1,16 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	background-color:lightorage
+}
+header{
+	font-weight:bold;
+	font-size:50px;
+	color:green;
+}
+
+table{
+	border:2px;
+}
+
+table td{}
